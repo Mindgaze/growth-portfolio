@@ -420,8 +420,9 @@ Componentes do Projeto:
             {/* Project 1 */}
             <button
               onClick={() => setSelectedProject({
-                title: "Marketing 9 — Previsão de Revenue",
-                description: marketing9Description
+                title: "Previsão de Revenue",
+                description: marketing9Description,
+                pdfUrl: "/assets/marketing9.ipynb"
               })}
               className="text-left transition-all hover:scale-105"
             >
@@ -432,7 +433,7 @@ Componentes do Projeto:
                     Data Science & Machine Learning
                   </div>
                   <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                    Marketing 9 — Previsão de Revenue
+                    Previsão de Revenue
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     Pipeline completo de ML com boas práticas, custom transformer e otimização de modelos.
