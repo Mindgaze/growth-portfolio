@@ -56,32 +56,31 @@ Escrita persuasiva focada na "dor" da insegurança diagnóstica e na "solução"
 • Utilização de públicos Advantage+ e estratégias de retargeting para diminuir o custo por aquisição (CPA)
 • Cronograma de investimento (75% Topo de Funil / 25% Meio de Funil) para construção de audiência`;
 
-  const marketing9Description = `Previsor de Revenue
+  const marketing9Description = `Modelo de Previsão de Revenue
 
-Sistema completo de previsão de receita baseado em dados de campanhas de marketing, utilizando Machine Learning com boas práticas de engenharia de dados.
+Marketing Revenue Predictor - Production ML System
 
-Componentes do Projeto:
+Pipeline completo de Machine Learning para predição de receita em campanhas de marketing, com API REST e deploy público.
 
-🔄 Custom Transformer para Extração de Datas:
-• Classe DateFeatureExtractor que extrai features temporais (ano, mês, dia da semana)
-• Identificação automática de fins de semana para análise de padrões sazonais
-• Integração perfeita com scikit-learn pipeline
+🔄 Machine Learning
+• RandomForestRegressor com hyperparameter tuning (GridSearchCV)
+• Feature engineering automático para variáveis temporais
+• Pipeline scikit-learn serializado (.pkl) pronto para produção
 
-📊 Pipeline Profissional com ColumnTransformer:
-• Normalização de features numéricas (gasto, impressões, cliques, leads, pedidos) com StandardScaler
-• Codificação de variáveis categóricas (nome da campanha, categoria) com OneHotEncoder
-• Processamento automático de dados desconhecidos em produção
+🚀 API & Deploy
+• API REST Flask com endpoint /predict
+• Deploy público via ngrok com túnel HTTPS
+• Validação de entrada e error handling robusto
 
-🎯 Modelo Random Forest com GridSearchCV:
-• Otimização de hiperparâmetros (n_estimators, max_depth, min_samples_split)
-• Validação cruzada com 3 folds para robustez
-• Métricas de avaliação: R2, MAE e RMSE
+📊 Tech Stack
+scikit-learn | Flask | pandas | joblib | ngrok
 
-🚀 API Flask para Produção:
-• Endpoint /predict que aceita dados JSON de campanhas
-• Carregamento eficiente do modelo com joblib
-• Tratamento robusto de erros e validação de entrada
-• Pronto para integração com dashboards e sistemas de BI`;
+🌟 Resultado
+Sistema production-ready que permite predições de receita via HTTP request, democratizando acesso a ML para stakeholders não-técnicos.
+
+Modelo Performance: R² 0.87 | MAE R$ 1.243 | Cross-validation estável
+
+Pipeline completo: Data → Preprocessing → Feature Engineering → Training → Serialization → API → Public Deployment`;
 
   const webScrapingDescription = `Web Scraping Dinâmico com Playwright
 
