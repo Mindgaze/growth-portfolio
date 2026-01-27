@@ -2,9 +2,11 @@
    Deep navy to purple gradients, flowing forms, mesh backgrounds
    Typography: Plus Jakarta Sans (headings), Inter (body), Outfit (accent numbers) */
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
+import ProjectModal from "@/components/ProjectModal";
 import { 
   Brain, 
   Cog, 
@@ -24,12 +26,35 @@ import {
 } from "lucide-react";
 
 export default function Home() {
+  const [selectedProject, setSelectedProject] = useState<{
+    title: string;
+    description: string;
+    pdfUrl?: string;
+  } | null>(null);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const p1HubDescription = `Planeamento Estratégico e Copywriting: Setor Médico
+
+Desenvolvimento de uma estratégia completa de lançamento para um curso especializado em diagnóstico de tireoide, focado em médicos generalistas.
+
+Componentes do Projeto:
+
+📋 Arquitetura de Conversão (LP):
+Estruturação de uma Landing Page utilizando gatilhos de autoridade, escassez e prova social, desenhada para converter um público com "pouca consciência" da marca.
+
+✍️ Copywriting de Alta Performance:
+Escrita persuasiva focada na "dor" da insegurança diagnóstica e na "solução" da praticidade clínica.
+
+📊 Estratégia de Tráfego Pago (Meta Ads):
+• Planeamento de campanhas segmentadas por interesses médicos e comportamento
+• Utilização de públicos Advantage+ e estratégias de retargeting para diminuir o custo por aquisição (CPA)
+• Cronograma de investimento (75% Topo de Funil / 25% Meio de Funil) para construção de audiência`;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -335,20 +360,29 @@ export default function Home() {
             </Card>
 
             {/* Project 5 */}
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-pink-500/50 transition-all group">
-              <div className="mb-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-pink-500/10 text-pink-400 text-xs rounded-full mb-3">
-                  <Rocket className="h-3 w-3" />
-                  Marketing Strategy
+            <button
+              onClick={() => setSelectedProject({
+                title: "Lançamento de Curso Médico — P1 HUB",
+                description: p1HubDescription,
+                pdfUrl: "/assets/p1hub-estrategia.pdf"
+              })}
+              className="text-left transition-all hover:scale-105"
+            >
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-pink-500/50 transition-all group h-full cursor-pointer">
+                <div className="mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-pink-500/10 text-pink-400 text-xs rounded-full mb-3">
+                    <Rocket className="h-3 w-3" />
+                    Marketing Strategy
+                  </div>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    Lançamento de Curso Médico — P1 HUB
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Planeamento Estratégico e Copywriting: Setor Médico. Estratégia completa de lançamento com arquitetura de conversão, copywriting de alta performance e tráfego pago segmentado.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                  Lançamento de Curso Médico — P1 HUB
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Planeamento de funil, copywriting e tráfego pago para educação médica.
-                </p>
-              </div>
-            </Card>
+              </Card>
+            </button>
 
             {/* Project 6 */}
             <Card className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-lime-500/50 transition-all group">
@@ -459,6 +493,17 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Project Modal */}
+      {selectedProject && (
+        <ProjectModal
+          open={!!selectedProject}
+          onOpenChange={(open) => !open && setSelectedProject(null)}
+          title={selectedProject.title}
+          description={selectedProject.description}
+          pdfUrl={selectedProject.pdfUrl}
+        />
+      )}
     </div>
   );
 }
