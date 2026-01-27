@@ -490,7 +490,8 @@ Componentes do Projeto:
             <button
               onClick={() => setSelectedProject({
                 title: "Framework Estratégico para Consultoria Cloud",
-                description: frameworkDescription
+                description: frameworkDescription,
+                pdfUrl: "/assets/framework-cloud.pdf"
               })}
               className="text-left transition-all hover:scale-105"
             >
