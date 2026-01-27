@@ -56,6 +56,125 @@ Escrita persuasiva focada na "dor" da insegurança diagnóstica e na "solução"
 • Utilização de públicos Advantage+ e estratégias de retargeting para diminuir o custo por aquisição (CPA)
 • Cronograma de investimento (75% Topo de Funil / 25% Meio de Funil) para construção de audiência`;
 
+  const marketing9Description = `Marketing 9 — Previsão de Revenue
+
+Pipeline completo de Machine Learning com boas práticas de engenharia de dados e otimização de modelos.
+
+Componentes do Projeto:
+
+🔄 Pipeline Completo:
+• Extração e limpeza de dados de múltiplas fontes
+• Transformação e feature engineering
+• Treinamento e validação de modelos
+• Deployment e monitoramento em produção
+
+⚙️ Custom Transformers:
+• Desenvolvimento de transformadores personalizados para o domínio específico
+• Integração com scikit-learn pipeline
+• Reutilização e versionamento de componentes
+
+📈 Otimização de Modelos:
+• Hyperparameter tuning com Optuna
+• Validação cruzada e avaliação de performance
+• Análise de importância de features
+• Tratamento de desbalanceamento de classes`;
+
+  const webScrapingDescription = `Web Scraping Dinâmico com Playwright
+
+Extração de dados dinâmicos em ambientes headless com setup completo de infraestrutura.
+
+Componentes do Projeto:
+
+🌐 Automação com Playwright:
+• Navegação em sites com JavaScript renderizado
+• Tratamento de elementos dinâmicos e lazy loading
+• Captura de dados em tempo real
+• Gestão de sessões e cookies
+
+🗄️ Infraestrutura Completa:
+• Configuração de ambiente headless (Docker)
+• Escalabilidade com múltiplas instâncias
+• Armazenamento de dados estruturado
+• Logs e monitoramento de execução
+
+📊 Processamento de Dados:
+• Limpeza e normalização de dados extraídos
+• Validação de qualidade
+• Integração com data warehouse
+• Agendamento de execuções periódicas`;
+
+  const apiFlaskDescription = `API Preditiva — Flask + React
+
+Backend em Flask com endpoints estruturados e frontend em React com consumo assíncrono.
+
+Componentes do Projeto:
+
+🔌 Backend em Flask:
+• Arquitetura RESTful com blueprints modulares
+• Endpoints para treinamento e predição de modelos
+• Autenticação e autorização com JWT
+• Documentação automática com Swagger
+
+⚛️ Frontend em React:
+• Interface responsiva para input de dados
+• Visualização de resultados em tempo real
+• Gráficos interativos com Plotly
+• Tratamento de erros e feedback ao usuário
+
+🔄 Integração Completa:
+• Consumo assíncrono de APIs com axios
+• Caching de resultados
+• Tratamento de estados de carregamento
+• Deploy containerizado com Docker Compose`;
+
+  const frameworkDescription = `Framework Estratégico para Consultoria Cloud
+
+Objetivo: Posicionar a consultoria como um parceiro estratégico indispensável, indo além da simples revenda de infraestrutura.
+
+Componentes do Projeto:
+
+🔍 Diagnóstico de Mercado:
+• Análise do crescimento do setor de Cloud no Brasil
+• Identificação de lacunas de atendimento nos grandes players
+• Mapeamento de oportunidades de diferenciação
+• Análise de concorrência e posicionamento
+
+📊 Matriz de Diferenciação:
+• Atendimento Humanizado vs. Automatização dos Gigantes
+• Customização vs. Padronização
+• Suporte especializado vs. Autoatendimento
+• Consultoria estratégica vs. Venda transacional
+
+🎯 Estratégia de Posicionamento:
+• Desenvolvimento de proposta de valor única
+• Definição de buyer personas
+• Criação de messaging framework
+• Plano de go-to-market`;
+
+  const barbeariDescription = `Landing Page — Barbearia Dom Pafa
+
+Landing page criada em menos de 8 horas para campanha sazonal com foco em conversão mobile.
+
+Componentes do Projeto:
+
+⚡ Desenvolvimento Ágil:
+• Design responsivo mobile-first
+• Implementação em HTML/CSS/JavaScript vanilla
+• Otimização de performance (< 2s load time)
+• SEO básico e meta tags
+
+📱 Otimização para Conversão:
+• CTA estrategicamente posicionados
+• Formulário de agendamento integrado
+• Galeria de serviços com imagens otimizadas
+• Depoimentos e avaliações sociais
+
+🎨 Design & UX:
+• Layout limpo e profissional
+• Paleta de cores alinhada com marca
+• Tipografia legível e hierarquizada
+• Animações sutis para engajamento`;
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
@@ -296,68 +415,100 @@ Escrita persuasiva focada na "dor" da insegurança diagnóstica e na "solução"
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {/* Project 1 */}
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-blue-500/30 hover:border-blue-500/60 transition-all group">
-              <div className="mb-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full mb-3">
-                  <BarChart3 className="h-3 w-3" />
-                  Data Science & Machine Learning
+            <button
+              onClick={() => setSelectedProject({
+                title: "Marketing 9 — Previsão de Revenue",
+                description: marketing9Description
+              })}
+              className="text-left transition-all hover:scale-105"
+            >
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-blue-500/30 hover:border-blue-500/60 transition-all group h-full cursor-pointer">
+                <div className="mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full mb-3">
+                    <BarChart3 className="h-3 w-3" />
+                    Data Science & Machine Learning
+                  </div>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    Marketing 9 — Previsão de Revenue
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Pipeline completo de ML com boas práticas, custom transformer e otimização de modelos.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                  Marketing 9 — Previsão de Revenue
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Pipeline completo de ML com boas práticas, custom transformer e otimização de modelos.
-                </p>
-              </div>
-            </Card>
+              </Card>
+            </button>
 
             {/* Project 2 */}
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-yellow-500/30 hover:border-yellow-500/60 transition-all group">
-              <div className="mb-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-yellow-500/10 text-yellow-400 text-xs rounded-full mb-3">
-                  <Database className="h-3 w-3" />
-                  Data Engineering
+            <button
+              onClick={() => setSelectedProject({
+                title: "Web Scraping Dinâmico com Playwright",
+                description: webScrapingDescription
+              })}
+              className="text-left transition-all hover:scale-105"
+            >
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-yellow-500/30 hover:border-yellow-500/60 transition-all group h-full cursor-pointer">
+                <div className="mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-yellow-500/10 text-yellow-400 text-xs rounded-full mb-3">
+                    <Database className="h-3 w-3" />
+                    Data Engineering
+                  </div>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    Web Scraping Dinâmico com Playwright
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Extração de dados dinâmicos em ambientes headless com setup completo de infraestrutura.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                  Web Scraping Dinâmico com Playwright
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Extração de dados dinâmicos em ambientes headless com setup completo de infraestrutura.
-                </p>
-              </div>
-            </Card>
+              </Card>
+            </button>
 
             {/* Project 3 */}
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-purple-500/30 hover:border-purple-500/60 transition-all group">
-              <div className="mb-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-purple-500/10 text-purple-400 text-xs rounded-full mb-3">
-                  <Code className="h-3 w-3" />
-                  Full Stack Development
+            <button
+              onClick={() => setSelectedProject({
+                title: "API Preditiva — Flask + React",
+                description: apiFlaskDescription
+              })}
+              className="text-left transition-all hover:scale-105"
+            >
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-purple-500/30 hover:border-purple-500/60 transition-all group h-full cursor-pointer">
+                <div className="mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-purple-500/10 text-purple-400 text-xs rounded-full mb-3">
+                    <Code className="h-3 w-3" />
+                    Full Stack Development
+                  </div>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    API Preditiva — Flask + React
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Backend em Flask com endpoints estruturados e frontend em React com consumo assíncrono.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                  API Preditiva — Flask + React
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Backend em Flask com endpoints estruturados e frontend em React com consumo assíncrono.
-                </p>
-              </div>
-            </Card>
+              </Card>
+            </button>
 
             {/* Project 4 */}
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-lime-500/50 transition-all group">
-              <div className="mb-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-lime-500/10 text-lime-400 text-xs rounded-full mb-3">
-                  <Lightbulb className="h-3 w-3" />
-                  Business Strategy
+            <button
+              onClick={() => setSelectedProject({
+                title: "Framework Estratégico para Consultoria Cloud",
+                description: frameworkDescription
+              })}
+              className="text-left transition-all hover:scale-105"
+            >
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-lime-500/50 transition-all group h-full cursor-pointer">
+                <div className="mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-lime-500/10 text-lime-400 text-xs rounded-full mb-3">
+                    <Lightbulb className="h-3 w-3" />
+                    Business Strategy
+                  </div>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    Framework Estratégico para Consultoria Cloud
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Framework completo de diferenciação competitiva para consultoria de TI.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                  Framework Estratégico para Consultoria Cloud
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Framework completo de diferenciação competitiva para consultoria de TI.
-                </p>
-              </div>
-            </Card>
+              </Card>
+            </button>
 
             {/* Project 5 */}
             <button
@@ -385,20 +536,28 @@ Escrita persuasiva focada na "dor" da insegurança diagnóstica e na "solução"
             </button>
 
             {/* Project 6 */}
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-lime-500/50 transition-all group">
-              <div className="mb-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-lime-500/10 text-lime-400 text-xs rounded-full mb-3">
-                  <Wrench className="h-3 w-3" />
-                  Agile Execution & UX
+            <button
+              onClick={() => setSelectedProject({
+                title: "Landing Page — Barbearia Dom Pafa",
+                description: barbeariDescription
+              })}
+              className="text-left transition-all hover:scale-105"
+            >
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-lime-500/50 transition-all group h-full cursor-pointer">
+                <div className="mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-lime-500/10 text-lime-400 text-xs rounded-full mb-3">
+                    <Wrench className="h-3 w-3" />
+                    Agile Execution & UX
+                  </div>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    Landing Page — Barbearia Dom Pafa
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Landing page criada em menos de 8 horas para campanha sazonal com foco em conversão mobile.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                  Landing Page — Barbearia Dom Pafa
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Landing page criada em menos de 8 horas para campanha sazonal com foco em conversão mobile.
-                </p>
-              </div>
-            </Card>
+              </Card>
+            </button>
           </div>
         </div>
       </section>
