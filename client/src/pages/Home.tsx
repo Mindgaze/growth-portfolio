@@ -30,6 +30,7 @@ export default function Home() {
     title: string;
     description: string;
     pdfUrl?: string;
+    colabUrl?: string;
   } | null>(null);
 
   const scrollToSection = (id: string) => {
@@ -422,7 +423,7 @@ Componentes do Projeto:
               onClick={() => setSelectedProject({
                 title: "Previsão de Revenue",
                 description: marketing9Description,
-                pdfUrl: "/assets/marketing9.ipynb"
+                colabUrl: "/assets/marketing9.ipynb"
               })}
               className="text-left transition-all hover:scale-105"
             >
@@ -666,6 +667,7 @@ Componentes do Projeto:
           title={selectedProject.title}
           description={selectedProject.description}
           pdfUrl={selectedProject.pdfUrl}
+          colabUrl={selectedProject.colabUrl}
         />
       )}
     </div>

@@ -10,6 +10,7 @@ interface ProjectModalProps {
   title: string;
   description: string;
   pdfUrl?: string;
+  colabUrl?: string;
 }
 
 export default function ProjectModal({
@@ -18,6 +19,7 @@ export default function ProjectModal({
   title,
   description,
   pdfUrl,
+  colabUrl,
 }: ProjectModalProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -53,6 +55,24 @@ export default function ProjectModal({
                 className="inline-flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg transition-colors"
               >
                 <span>Baixar PDF</span>
+              </a>
+            </div>
+          )}
+
+          {colabUrl && (
+            <div className="space-y-4">
+              <h3 className="font-semibold text-lg" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                Notebook Colab
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Acesse e execute o notebook completo no Google Colab
+              </p>
+              <a
+                href={colabUrl}
+                download
+                className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+              >
+                <span>Baixar Notebook Colab</span>
               </a>
             </div>
           )}
