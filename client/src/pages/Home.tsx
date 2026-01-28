@@ -465,7 +465,9 @@ Componentes do Projeto:
             <button
               onClick={() => setSelectedProject({
                 title: "Web Scraping Dinâmico e Relatórios com IA",
-                description: webScrapingDescription
+                description: webScrapingDescription,
+                colabUrl: "/assets/market-intelligence.ipynb",
+                websiteUrl: "https://lovable.dev/projects/129d77e5-af18-423b-b37e-9569ceb95303"
               })}
               className="text-left transition-all hover:scale-105"
             >

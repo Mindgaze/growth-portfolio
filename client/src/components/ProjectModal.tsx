@@ -84,6 +84,11 @@ export default function ProjectModal({
               <h3 className="font-semibold text-lg" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
                 Visualizar Projeto
               </h3>
+              {websiteUrl.includes('lovable.dev') && (
+                <p className="text-xs text-muted-foreground bg-card/50 p-3 rounded-lg border border-border/30">
+                  🛠️ <span className="font-semibold">Protótipo desenvolvido com</span> <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Lovable</a> - Plataforma de desenvolvimento de UI com IA
+                </p>
+              )}
               <div className="bg-card/50 rounded-lg p-4 border border-border/50 overflow-hidden">
                 <iframe
                   src={websiteUrl}
