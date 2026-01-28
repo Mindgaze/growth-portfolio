@@ -31,6 +31,7 @@ export default function Home() {
     description: string;
     pdfUrl?: string;
     colabUrl?: string;
+    websiteUrl?: string;
   } | null>(null);
 
   const scrollToSection = (id: string) => {
@@ -545,7 +546,8 @@ Componentes do Projeto:
             <button
               onClick={() => setSelectedProject({
                 title: "Landing Page — Barbearia Dom Pafa",
-                description: barbeariDescription
+                description: barbeariDescription,
+                websiteUrl: "https://novembro-azul-barber.lovable.app"
               })}
               className="text-left transition-all hover:scale-105"
             >
@@ -668,6 +670,7 @@ Componentes do Projeto:
           description={selectedProject.description}
           pdfUrl={selectedProject.pdfUrl}
           colabUrl={selectedProject.colabUrl}
+          websiteUrl={selectedProject.websiteUrl}
         />
       )}
     </div>

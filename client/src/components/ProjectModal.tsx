@@ -11,6 +11,7 @@ interface ProjectModalProps {
   description: string;
   pdfUrl?: string;
   colabUrl?: string;
+  websiteUrl?: string;
 }
 
 export default function ProjectModal({
@@ -20,6 +21,7 @@ export default function ProjectModal({
   description,
   pdfUrl,
   colabUrl,
+  websiteUrl,
 }: ProjectModalProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -73,6 +75,30 @@ export default function ProjectModal({
                 className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
               >
                 <span>Baixar Notebook Colab</span>
+              </a>
+            </div>
+          )}
+
+          {websiteUrl && (
+            <div className="space-y-4">
+              <h3 className="font-semibold text-lg" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                Visualizar Projeto
+              </h3>
+              <div className="bg-card/50 rounded-lg p-4 border border-border/50 overflow-hidden">
+                <iframe
+                  src={websiteUrl}
+                  className="w-full h-96 rounded-lg border border-border/30"
+                  title={`${title} Website`}
+                  sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                />
+              </div>
+              <a
+                href={websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg transition-colors"
+              >
+                <span>Abrir em nova aba</span>
               </a>
             </div>
           )}
