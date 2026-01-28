@@ -277,25 +277,38 @@ Componentes do Projeto:
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="text-center lg:text-left">
               <div 
-                className="text-7xl md:text-8xl font-bold text-lime-400 mb-2"
+                className="text-5xl md:text-6xl font-bold text-lime-400 mb-4"
                 style={{ fontFamily: "'Outfit', sans-serif" }}
               >
-                10+
+                Growth Marketing +<br />Ciência de Dados
               </div>
               <p className="text-sm uppercase tracking-widest text-muted-foreground">
-                Anos de Experiência
+                = Crescimento Escalável
               </p>
             </div>
 
             <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50">
               <p className="text-lg leading-relaxed mb-6" style={{ fontFamily: "'Inter', sans-serif" }}>
-                Atuo na interseção entre <span className="text-foreground font-semibold">dados, tecnologia e negócio</span> com foco em Marketing Digital, estruturando sistemas técnicos e estratégicos que transformam informação em{" "}
-                <span className="text-lime-400 font-semibold">vantagem competitiva</span>.
+                <span className="text-foreground font-semibold">Especialista em Growth Marketing e IA</span> que transforma dados em decisões estratégicas e decisões em crescimento mensurável.
               </p>
               
-              <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground">
-                "Este profissional lê sistemas complexos, identifica pontos de alavancagem e transforma dados em decisões estratégicas."
-              </blockquote>
+              <div className="space-y-4 text-muted-foreground">
+                <p className="leading-relaxed">
+                  <span className="text-lime-400 font-semibold">Na prática:</span> Gerencio portfólios de tráfego pago (180+ contas Meta Ads, R$10k+/mês), desenvolvo sistemas de machine learning em produção, e construo automações que eliminam gargalos e maximizam ROI.
+                </p>
+                
+                <p className="leading-relaxed">
+                  <span className="text-lime-400 font-semibold">Stack técnico:</span> Python, SQL, scikit-learn, TensorFlow, Flask, Playwright, sentence-transformers, Meta Ads Platform. Certificado Meta Digital Marketing Associate. Pós-graduado em Ciência de Dados e IA.
+                </p>
+                
+                <p className="leading-relaxed">
+                  <span className="text-lime-400 font-semibold">Meu diferencial:</span> Combino mentalidade estratégica de marketing com rigor técnico de engenharia de dados. Entrego sistemas funcionais, não apenas relatórios. Foco em KPIs que importam: ROI, conversão, crescimento sustentável.
+                </p>
+                
+                <p className="leading-relaxed italic border-l-4 border-primary pl-4">
+                  Pronto para colaborar em projetos que exigem visão de negócio e execução técnica de alto nível.
+                </p>
+              </div>
             </Card>
           </div>
         </div>
