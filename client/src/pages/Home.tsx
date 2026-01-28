@@ -84,29 +84,33 @@ Modelo Performance: R² 0.87 | MAE R$ 1.243 | Cross-validation estável
 
 Pipeline completo: Data → Preprocessing → Feature Engineering → Training → Serialization → API → Public Deployment`;
 
-  const webScrapingDescription = `Web Scraping Dinâmico com Playwright
+  const webScrapingDescription = `Web Scraping Dinâmico e Relatórios com IA
 
-Extração de dados dinâmicos em ambientes headless com setup completo de infraestrutura.
+Arquitetura Unificada (Market Intelligence Pro - Unified): Um sistema robusto que integra automação de navegador e análise de dados em um único fluxo.
 
-Componentes do Projeto:
+🌐 Web Scraping Dinâmico:
+• Utiliza Playwright para navegar em sites complexos (SPAs, React, Vue)
+• Supera as limitações de scrapers tradicionais que não executam JavaScript
+• Tratamento de elementos dinâmicos, lazy loading e sessões
+• Captura de dados em tempo real com gestão de cookies
 
-🌐 Automação com Playwright:
-• Navegação em sites com JavaScript renderizado
-• Tratamento de elementos dinâmicos e lazy loading
-• Captura de dados em tempo real
-• Gestão de sessões e cookies
+🤖 Processamento de Linguagem Natural (LLM):
+• Sistema preparado para enviar conteúdo extraído para modelos de IA
+• Filtram o ruído e extraem apenas informações relevantes para o negócio
+• Identificação automática de preços, diferenciais e propostas de valor
+• Análise de inteligência competitiva em tempo real
 
-🗄️ Infraestrutura Completa:
-• Configuração de ambiente headless (Docker)
-• Escalabilidade com múltiplas instâncias
-• Armazenamento de dados estruturado
-• Logs e monitoramento de execução
+🚀 API Flask de Baixa Latência:
+• Endpoint /scrape: Recebe a URL do protótipo Lovable e inicia a extração
+• Endpoint /health: Monitoramento constante para garantir que o serviço está online
+• Pronto para processar requisições em escala
+• Tratamento robusto de erros e retry automático
 
-📊 Processamento de Dados:
-• Limpeza e normalização de dados extraídos
-• Validação de qualidade
-• Integração com data warehouse
-• Agendamento de execuções periódicas`;
+📄 Exportação Documental:
+• Integração com biblioteca python-docx
+• Geração de relatórios profissionais automaticamente após análise
+• Formatação automática com gráficos e tabelas
+• Export em múltiplos formatos (DOCX, PDF)`;
 
   const apiFlaskDescription = `API Preditiva — Flask + React
 
@@ -460,7 +464,7 @@ Componentes do Projeto:
             {/* Project 2 */}
             <button
               onClick={() => setSelectedProject({
-                title: "Web Scraping Dinâmico com Playwright",
+                title: "Web Scraping Dinâmico e Relatórios com IA",
                 description: webScrapingDescription
               })}
               className="text-left transition-all hover:scale-105"
@@ -469,13 +473,13 @@ Componentes do Projeto:
                 <div className="mb-4">
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-yellow-500/10 text-yellow-400 text-xs rounded-full mb-3">
                     <Database className="h-3 w-3" />
-                    Data Engineering
+                    Data Engineering & AI
                   </div>
                   <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                    Web Scraping Dinâmico com Playwright
+                    Web Scraping Dinâmico e Relatórios com IA
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    Extração de dados dinâmicos em ambientes headless com setup completo de infraestrutura.
+                    Arquitetura unificada com Playwright, LLM e API Flask para inteligência competitiva automatizada.
                   </p>
                 </div>
               </Card>
