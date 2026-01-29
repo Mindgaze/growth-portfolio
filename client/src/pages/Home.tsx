@@ -22,7 +22,8 @@ import {
   Linkedin,
   Github,
   Globe,
-  ChevronDown
+  ChevronDown,
+  MessageCircle
 } from "lucide-react";
 
 export default function Home() {
@@ -607,53 +608,61 @@ Componentes do Projeto:
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-lime-500/30 hover:border-lime-500/60 transition-all">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Mail className="h-6 w-6 text-primary" />
+            <a href="mailto:rodriguesfilipe6108@gmail.com" className="block">
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-lime-500/30 hover:border-lime-500/60 transition-all cursor-pointer hover:scale-105">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <Mail className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-1">Email</p>
+                    <p className="font-semibold">rodriguesfilipe6108@gmail.com</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground mb-1">Email</p>
-                  <p className="font-semibold">contato@exemplo.com</p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </a>
 
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-lime-500/30 hover:border-lime-500/60 transition-all">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Linkedin className="h-6 w-6 text-primary" />
+            <a href="https://www.linkedin.com/in/filipe-rodrigues-24678317a/" target="_blank" rel="noopener noreferrer" className="block">
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-lime-500/30 hover:border-lime-500/60 transition-all cursor-pointer hover:scale-105">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <Linkedin className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-1">LinkedIn</p>
+                    <p className="font-semibold">filipe-rodrigues-24678317a</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground mb-1">LinkedIn</p>
-                  <p className="font-semibold">/in/seu-perfil</p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </a>
 
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-lime-500/30 hover:border-lime-500/60 transition-all">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Github className="h-6 w-6 text-primary" />
+            <a href="https://github.com/Mindgaze" target="_blank" rel="noopener noreferrer" className="block">
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-lime-500/30 hover:border-lime-500/60 transition-all cursor-pointer hover:scale-105">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <Github className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-1">GitHub</p>
+                    <p className="font-semibold">Mindgaze</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground mb-1">GitHub</p>
-                  <p className="font-semibold">github.com/seu-usuario</p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </a>
 
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-lime-500/30 hover:border-lime-500/60 transition-all">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Globe className="h-6 w-6 text-primary" />
+            <a href="https://wa.me/5511986339285" target="_blank" rel="noopener noreferrer" className="block">
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-lime-500/30 hover:border-lime-500/60 transition-all cursor-pointer hover:scale-105">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <MessageCircle className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-1">WhatsApp</p>
+                    <p className="font-semibold">+55 11 98633-9285</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground mb-1">Website</p>
-                  <p className="font-semibold">seu-site.com</p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </a>
           </div>
 
           <div className="text-center">
