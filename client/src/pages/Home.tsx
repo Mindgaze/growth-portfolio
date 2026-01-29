@@ -665,14 +665,25 @@ Componentes do Projeto:
             </a>
           </div>
 
-          <div className="text-center">
-            <Button 
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base rounded-xl border-2 border-lime-400/50 hover:border-lime-400 transition-all hover:scale-105"
-            >
-              <Mail className="mr-2 h-5 w-5" />
-              Enviar mensagem
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:rodriguesfilipe6108@gmail.com">
+              <Button 
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base rounded-xl border-2 border-lime-400/50 hover:border-lime-400 transition-all hover:scale-105"
+              >
+                <Mail className="mr-2 h-5 w-5" />
+                Enviar mensagem
+              </Button>
+            </a>
+            <a href="https://wa.me/5511986339285" target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="lg"
+                className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-base rounded-xl border-2 border-green-400/50 hover:border-green-400 transition-all hover:scale-105"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                WhatsApp
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -682,7 +693,7 @@ Componentes do Projeto:
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-2xl font-bold" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-              J.
+              Filipe Rodrigues
             </div>
             <p className="text-sm text-muted-foreground">
               © 2026 • Desenvolvido com estratégia e precisão

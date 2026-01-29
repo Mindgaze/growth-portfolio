@@ -20,7 +20,7 @@ export default function Header() {
             className="text-2xl font-bold text-foreground hover:text-primary transition-colors"
             style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
           >
-            J.
+            Filipe Rodrigues
           </button>
 
           <nav className="hidden md:flex items-center gap-8">
