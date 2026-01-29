@@ -112,29 +112,30 @@ Arquitetura Unificada (Market Intelligence Pro - Unified): Um sistema robusto qu
 • Formatação automática com gráficos e tabelas
 • Export em múltiplos formatos (DOCX, PDF)`;
 
-  const apiFlaskDescription = `API Preditiva — Flask + React
+  const apiFlaskDescription = `Market Intelligence Pro: Ecossistema Inteligente de BI
 
-Backend em Flask com endpoints estruturados e frontend em React com consumo assíncrono.
+O Market Intelligence Pro eh uma plataforma de analise avancada que transforma dados brutos em ativos estrategicos. Hospedado no Google Cloud, o sistema integra modelos de Machine Learning para previsao financeira e o poder do LLM Gemini para gerar insights de negocio em tempo real.
 
-Componentes do Projeto:
+1. Data Lab: Gestao Inteligente de Dados
+O coracao operacional do projeto eh o Data Lab, um ambiente projetado para centralizar e organizar o fluxo de informacoes.
+- Update Dinamico: Interface intuitiva para upload de datasets (CSV/Excel) diretamente para a nuvem
+- Ecossistema Google: Integracao nativa com Google Drive para armazenamento seguro e Google Colab para experimentacao agil
 
-🔌 Backend em Flask:
-• Arquitetura RESTful com blueprints modulares
-• Endpoints para treinamento e predição de modelos
-• Autenticação e autorização com JWT
-• Documentação automática com Swagger
+2. Dashboards: Visualizacao Estrategica
+A aplicacao converte numeros complexos em interfaces visuais claras atraves do prototipo desenvolvido em Lovable (React).
+- Metricas em Tempo Real: Monitoramento de KPIs criticos como Custo de Aquisicao (CAC), ROI e volume de Leads
 
-⚛️ Frontend em React:
-• Interface responsiva para input de dados
-• Visualização de resultados em tempo real
-• Gráficos interativos com Plotly
-• Tratamento de erros e feedback ao usuário
+3. Preditor de Receita: O Futuro Baseado em Dados
+Diferente de relatorios comuns que olham para o passado, este sistema utiliza Machine Learning para prever o futuro usando o Algoritmo Random Forest.
+- Simulador de Cenarios: Permite que o stakeholder ajuste variaveis para visualizar o impacto projetado na receita
 
-🔄 Integração Completa:
-• Consumo assíncrono de APIs com axios
-• Caching de resultados
-• Tratamento de estados de carregamento
-• Deploy containerizado com Docker Compose`;
+4. IA Generativa (LLM Gemini): De Dados a Insights
+A inteligencia do projeto eh potencializada pelo Google Gemini, que atua como um consultor de negocios virtual.
+- Analise Automatizada: A IA le as tabelas de dados e redige explicacoes em linguagem natural
+- Extracao de Insights: O sistema identifica gargalos operacionais e sugere acoes corretivas
+- Relatorios Executivos: Geracao de resumos visando obter insights valiosos
+
+Tech Stack: Google Cloud, Flask, React, Random Forest, Google Gemini LLM, Google Drive, Google Colab`;
 
   const frameworkDescription = `Framework Estratégico para Consultoria Cloud
 
@@ -490,8 +491,9 @@ Componentes do Projeto:
             {/* Project 3 */}
             <button
               onClick={() => setSelectedProject({
-                title: "API Preditiva — Flask + React",
-                description: apiFlaskDescription
+                title: "Market Intelligence Pro: Ecossistema Inteligente de BI",
+                description: apiFlaskDescription,
+                websiteUrl: "https://market-intelligence-pro-611316859676.us-west1.run.app/"
               })}
               className="text-left transition-all hover:scale-105"
             >
@@ -499,13 +501,13 @@ Componentes do Projeto:
                 <div className="mb-4">
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-purple-500/10 text-purple-400 text-xs rounded-full mb-3">
                     <Code className="h-3 w-3" />
-                    Full Stack Development
+                    Business Intelligence & AI
                   </div>
                   <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                    API Preditiva — Flask + React
+                    Market Intelligence Pro: Ecossistema Inteligente de BI
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    Backend em Flask com endpoints estruturados e frontend em React com consumo assíncrono.
+                    Plataforma de análise avançada com ML, Google Gemini e dashboards em tempo real hospedada no Google Cloud.
                   </p>
                 </div>
               </Card>
