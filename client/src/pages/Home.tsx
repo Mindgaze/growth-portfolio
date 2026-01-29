@@ -249,16 +249,18 @@ Componentes do Projeto:
               </div>
             </div>
 
-            {/* Decorative Element */}
+            {/* Profile Photo */}
             <div className="hidden lg:flex items-center justify-center">
               <div className="relative w-80 h-80">
                 <div className="absolute inset-0 border-2 border-primary/30 rounded-full animate-spin-slow" style={{ animationDuration: '20s' }} />
                 <div className="absolute inset-8 border-2 border-purple-500/20 rounded-full animate-spin-slow" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
                 <div className="absolute inset-16 border-2 border-pink-500/20 rotate-45 animate-spin-slow" style={{ animationDuration: '25s' }} />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full backdrop-blur-xl flex items-center justify-center text-6xl font-bold">
-                    J
-                  </div>
+                  <img 
+                    src="/images/filipe-profile.png" 
+                    alt="Filipe Rodrigues" 
+                    className="w-72 h-72 rounded-full object-cover shadow-2xl border-4 border-primary/50"
+                  />
                 </div>
               </div>
             </div>
