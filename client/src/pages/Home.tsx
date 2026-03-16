@@ -162,6 +162,26 @@ Componentes do Projeto:
 • Criação de messaging framework
 • Plano de go-to-market`;
 
+  const churnDescription = `Análise e Predição de Churn
+
+Sistema completo de Machine Learning para identificar e prever clientes com risco de churn, permitindo ações preventivas estratégicas.
+
+🎯 Objetivo:
+Reduzir a taxa de churn através de identificação precoce de clientes em risco e implementação de estratégias de retenção personalizadas.
+
+📊 Componentes:
+• Análise exploratória de dados (EDA) para identificar padrões de comportamento
+• Feature engineering com variáveis comportamentais e demográficas
+• Modelos de classificação (Logistic Regression, Random Forest, Gradient Boosting)
+• Avaliação de performance com métricas de negócio (Recall, Precision, AUC-ROC)
+• Interpretabilidade de modelos com SHAP values
+
+🔧 Tech Stack:
+Python | scikit-learn | pandas | matplotlib | seaborn | Jupyter Notebook
+
+💡 Resultado:
+Modelo preditivo que identifica clientes em risco com 85% de acurácia, permitindo ações de retenção direcionadas e aumento de customer lifetime value.`;
+
   const barbeariDescription = `Landing Page — Barbearia Dom Pafa
 
 Landing page criada em menos de 8 horas para campanha sazonal com foco em conversão mobile.
@@ -199,7 +219,7 @@ Componentes do Projeto:
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/images/hero-abstract.png)',
+            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663319433617/SW6ZkUhrbVCS84SVhu4NKj/hero-abstract_913950b3.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             opacity: 0.4
@@ -586,6 +606,31 @@ Componentes do Projeto:
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     Landing page criada em menos de 8 horas para campanha sazonal com foco em conversão mobile.
+                  </p>
+                </div>
+              </Card>
+            </button>
+
+            {/* Project 7 - Churn */}
+            <button
+              onClick={() => setSelectedProject({
+                title: "Análise e Predição de Churn",
+                description: churnDescription,
+                colabUrl: "/assets/Chrun3.ipynb"
+              })}
+              className="text-left transition-all hover:scale-105"
+            >
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-indigo-500/30 hover:border-indigo-500/60 transition-all group h-full cursor-pointer">
+                <div className="mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-500/10 text-indigo-400 text-xs rounded-full mb-3">
+                    <Brain className="h-3 w-3" />
+                    Predictive Analytics
+                  </div>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    Análise e Predição de Churn
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Sistema ML para identificar clientes em risco com 85% de acurácia e estratégias de retenção.
                   </p>
                 </div>
               </Card>
