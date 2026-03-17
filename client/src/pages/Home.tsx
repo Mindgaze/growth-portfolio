@@ -337,6 +337,28 @@ Componentes do Projeto:
                   Pronto para colaborar em projetos que exigem visão de negócio e execução técnica de alto nível.
                 </p>
               </div>
+              
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a href="/assets/CV_Filipe_Rodrigues.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button 
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base rounded-xl border-2 border-lime-400/50 hover:border-lime-400 transition-all hover:scale-105 w-full sm:w-auto"
+                  >
+                    <Globe className="mr-2 h-5 w-5" />
+                    Visualizar Currículo
+                  </Button>
+                </a>
+                <a href="/assets/CV_Filipe_Rodrigues.pdf" download>
+                  <Button 
+                    size="lg"
+                    variant="outline"
+                    className="px-8 py-6 text-base rounded-xl border-2 border-primary/50 hover:border-primary transition-all hover:scale-105 w-full sm:w-auto"
+                  >
+                    <Code className="mr-2 h-5 w-5" />
+                    Baixar PDF
+                  </Button>
+                </a>
+              </div>
             </Card>
           </div>
         </div>
