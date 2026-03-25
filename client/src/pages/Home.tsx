@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import ProjectModal from "@/components/ProjectModal";
+import { gtmEvents } from "@/lib/gtmEvents";
 import { 
   Brain, 
   Cog, 
@@ -339,7 +340,7 @@ Componentes do Projeto:
               </div>
               
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a href="/assets/CV_Filipe_Rodrigues.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/assets/CV_Filipe_Rodrigues.pdf" target="_blank" rel="noopener noreferrer" onClick={() => gtmEvents.curriculumViewed()}>
                   <Button 
                     size="lg"
                     className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base rounded-xl border-2 border-lime-400/50 hover:border-lime-400 transition-all hover:scale-105 w-full sm:w-auto"
@@ -348,7 +349,7 @@ Componentes do Projeto:
                     Visualizar Currículo
                   </Button>
                 </a>
-                <a href="/assets/CV_Filipe_Rodrigues.pdf" download>
+                <a href="/assets/CV_Filipe_Rodrigues.pdf" download onClick={() => gtmEvents.curriculumDownloaded()}>
                   <Button 
                     size="lg"
                     variant="outline"
@@ -484,11 +485,14 @@ Componentes do Projeto:
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {/* Project 1 */}
             <button
-              onClick={() => setSelectedProject({
-                title: "Previsão de Revenue",
-                description: marketing9Description,
-                colabUrl: "/assets/marketing9.ipynb"
-              })}
+              onClick={() => {
+                gtmEvents.projectClicked("Previsão de Revenue", "Data Science & Machine Learning");
+                setSelectedProject({
+                  title: "Previsão de Revenue",
+                  description: marketing9Description,
+                  colabUrl: "/assets/marketing9.ipynb"
+                });
+              }}
               className="text-left transition-all hover:scale-105"
             >
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-blue-500/30 hover:border-blue-500/60 transition-all group h-full cursor-pointer">
@@ -677,7 +681,7 @@ Componentes do Projeto:
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
-            <a href="mailto:rodriguesfilipe6108@gmail.com" className="block">
+            <a href="mailto:rodriguesfilipe6108@gmail.com" className="block" onClick={() => gtmEvents.emailClicked()}>
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-lime-500/30 hover:border-lime-500/60 transition-all cursor-pointer hover:scale-105">
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
@@ -691,7 +695,7 @@ Componentes do Projeto:
               </Card>
             </a>
 
-            <a href="https://www.linkedin.com/in/filipe-rodrigues-24678317a/" target="_blank" rel="noopener noreferrer" className="block">
+            <a href="https://www.linkedin.com/in/filipe-rodrigues-24678317a/" target="_blank" rel="noopener noreferrer" className="block" onClick={() => gtmEvents.linkedinClicked()}>
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-lime-500/30 hover:border-lime-500/60 transition-all cursor-pointer hover:scale-105">
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
@@ -705,7 +709,7 @@ Componentes do Projeto:
               </Card>
             </a>
 
-            <a href="https://github.com/Mindgaze" target="_blank" rel="noopener noreferrer" className="block">
+            <a href="https://github.com/Mindgaze" target="_blank" rel="noopener noreferrer" className="block" onClick={() => gtmEvents.githubClicked()}>
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-lime-500/30 hover:border-lime-500/60 transition-all cursor-pointer hover:scale-105">
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
@@ -719,7 +723,7 @@ Componentes do Projeto:
               </Card>
             </a>
 
-            <a href="https://wa.me/5511986339285" target="_blank" rel="noopener noreferrer" className="block">
+            <a href="https://wa.me/5511986339285" target="_blank" rel="noopener noreferrer" className="block" onClick={() => gtmEvents.whatsappClicked()}>
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-lime-500/30 hover:border-lime-500/60 transition-all cursor-pointer hover:scale-105">
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
@@ -735,7 +739,7 @@ Componentes do Projeto:
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:rodriguesfilipe6108@gmail.com">
+            <a href="mailto:rodriguesfilipe6108@gmail.com" onClick={() => gtmEvents.emailClicked()}>
               <Button 
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base rounded-xl border-2 border-lime-400/50 hover:border-lime-400 transition-all hover:scale-105"
@@ -744,7 +748,7 @@ Componentes do Projeto:
                 Enviar mensagem
               </Button>
             </a>
-            <a href="https://wa.me/5511986339285" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5511986339285" target="_blank" rel="noopener noreferrer" onClick={() => gtmEvents.whatsappClicked()}>
               <Button 
                 size="lg"
                 className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-base rounded-xl border-2 border-green-400/50 hover:border-green-400 transition-all hover:scale-105"
