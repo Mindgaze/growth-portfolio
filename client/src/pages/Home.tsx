@@ -207,6 +207,26 @@ Componentes do Projeto:
 • Tipografia legível e hierarquizada
 • Animações sutis para engajamento`;
 
+  const timesfmDescription = `TimesFM 2.5: Forecasting de Séries Temporais com Foundation Models
+
+Experimento prático: Previsão de métricas do LinkedIn (impressões, engajamento, novos seguidores) usando TimesFM 2.5 — foundation model de séries temporais open-source do Google Research (200M parâmetros, zero-shot).
+
+🎯 O Desafio Real:
+Dados brutos do LinkedIn Analytics (XLSX) com todo o ruído operacional: dias sem publicação, spikes de viralização, distribuição algorítmica imprevisível, comportamento altamente não-linear. Nenhum dataset acadêmico limpo — o cenário mais próximo da realidade que um profissional de growth encontra.
+
+🧠 Por que TimesFM muda o jogo:
+Modelos clássicos (ARIMA, Prophet, SARIMA) precisam ser treinados série a série. TimesFM foi pré-treinado em bilhões de pontos de séries temporais reais e sintéticas, funcionando como um LLM de séries temporais. Resultado: previsões zero-shot sem fine-tuning.
+
+⚠️ O Problema Real: Esparsidade e Não-Estacionaridade
+Em dias sem publicação, engajamento vai a zero. Novos seguidores chegam em pulsos irregulares. Um único post viral gera spike de 5-10x. Conclusão: para séries com 40-70% de zeros estruturais, forecasting diário perde poder preditivo operacional.
+
+📊 O que foi gerado:
+• Previsões para 30 dias com intervalos de confiança (IC 80% e IC 40%)
+• Backtesting formal com métricas: MAE, RMSE, SMAPE
+• Interpretação com Gemini: transformando forecasting técnico em análise automatizada com recomendações
+
+🔗 Stack: TimesFM 2.5 | Google Colab | Gemini API | Pandas | Matplotlib`;
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
@@ -639,11 +659,14 @@ Componentes do Projeto:
 
             {/* Project 7 - Churn */}
             <button
-              onClick={() => setSelectedProject({
-                title: "Análise e Predição de Churn",
-                description: churnDescription,
-                colabUrl: "/assets/Chrun3.ipynb"
-              })}
+              onClick={() => {
+                gtmEvents.projectClicked("Análise e Predição de Churn", "Predictive Analytics");
+                setSelectedProject({
+                  title: "Análise e Predição de Churn",
+                  description: churnDescription,
+                  colabUrl: "/assets/Chrun3.ipynb"
+                });
+              }}
               className="text-left transition-all hover:scale-105"
             >
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-indigo-500/30 hover:border-indigo-500/60 transition-all group h-full cursor-pointer">
@@ -657,6 +680,34 @@ Componentes do Projeto:
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     Sistema ML para identificar clientes em risco com 85% de acurácia e estratégias de retenção.
+                  </p>
+                </div>
+              </Card>
+            </button>
+
+            {/* Project 8 - TimesFM */}
+            <button
+              onClick={() => {
+                gtmEvents.projectClicked("TimesFM LinkedIn Analytics", "Time Series Forecasting & AI");
+                setSelectedProject({
+                  title: "TimesFM LinkedIn Analytics",
+                  description: timesfmDescription,
+                  websiteUrl: "https://colab.research.google.com/drive/1A5B0t-GA4GWS2Ms9n98QJ5QrG82fZ2vG#scrollTo=NrPTQsDEa2vW"
+                });
+              }}
+              className="text-left transition-all hover:scale-105"
+            >
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-orange-500/30 hover:border-orange-500/60 transition-all group h-full cursor-pointer">
+                <div className="mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-500/10 text-orange-400 text-xs rounded-full mb-3">
+                    <TrendingUp className="h-3 w-3" />
+                    Time Series Forecasting & AI
+                  </div>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    TimesFM LinkedIn Analytics
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Foundation model de séries temporais para predição zero-shot de métricas do LinkedIn com Gemini.
                   </p>
                 </div>
               </Card>
