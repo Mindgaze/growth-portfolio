@@ -503,7 +503,35 @@ Em dias sem publicação, engajamento vai a zero. Novos seguidores chegam em pul
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {/* Project 1 */}
+            {/* Project 1 - TimesFM (moved to top) */}
+            <button
+              onClick={() => {
+                gtmEvents.projectClicked("TimesFM LinkedIn Analytics", "Time Series Forecasting & AI");
+                setSelectedProject({
+                  title: "TimesFM LinkedIn Analytics",
+                  description: timesfmDescription,
+                  websiteUrl: "https://colab.research.google.com/drive/1A5B0t-GA4GWS2Ms9n98QJ5QrG82fZ2vG#scrollTo=NrPTQsDEa2vW"
+                });
+              }}
+              className="text-left transition-all hover:scale-105"
+            >
+              <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-orange-500/30 hover:border-orange-500/60 transition-all group h-full cursor-pointer">
+                <div className="mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-500/10 text-orange-400 text-xs rounded-full mb-3">
+                    <TrendingUp className="h-3 w-3" />
+                    Time Series Forecasting & AI
+                  </div>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    TimesFM LinkedIn Analytics
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Foundation model de séries temporais para predição zero-shot de métricas do LinkedIn com Gemini.
+                  </p>
+                </div>
+              </Card>
+            </button>
+
+            {/* Project 2 - Previsão de Revenue */}
             <button
               onClick={() => {
                 gtmEvents.projectClicked("Previsão de Revenue", "Data Science & Machine Learning");
@@ -685,33 +713,7 @@ Em dias sem publicação, engajamento vai a zero. Novos seguidores chegam em pul
               </Card>
             </button>
 
-            {/* Project 8 - TimesFM */}
-            <button
-              onClick={() => {
-                gtmEvents.projectClicked("TimesFM LinkedIn Analytics", "Time Series Forecasting & AI");
-                setSelectedProject({
-                  title: "TimesFM LinkedIn Analytics",
-                  description: timesfmDescription,
-                  websiteUrl: "https://colab.research.google.com/drive/1A5B0t-GA4GWS2Ms9n98QJ5QrG82fZ2vG#scrollTo=NrPTQsDEa2vW"
-                });
-              }}
-              className="text-left transition-all hover:scale-105"
-            >
-              <Card className="p-6 bg-card/50 backdrop-blur-sm border-2 border-orange-500/30 hover:border-orange-500/60 transition-all group h-full cursor-pointer">
-                <div className="mb-4">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-500/10 text-orange-400 text-xs rounded-full mb-3">
-                    <TrendingUp className="h-3 w-3" />
-                    Time Series Forecasting & AI
-                  </div>
-                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                    TimesFM LinkedIn Analytics
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Foundation model de séries temporais para predição zero-shot de métricas do LinkedIn com Gemini.
-                  </p>
-                </div>
-              </Card>
-            </button>
+
           </div>
         </div>
       </section>
